@@ -6,4 +6,5 @@ export interface Transaction {
     tokenName: string;
     transactionStatus: boolean;
     type: string;
+    blockTime: number;
   }
