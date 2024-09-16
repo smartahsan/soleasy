@@ -14,6 +14,8 @@ import FromTo from "@/components/FromTo";
 import { timeAgo } from "@/util/TimeAgo";
 import ClipboardButton from "@/components/ClipboardButton";
 import Image from "next/image";
+import SolanaGray from '../../../images/solana-gray.png';
+import SolEasyLogo from '../../../images/soleasy-logo.png';
 
 export default async function Page({
   params,
@@ -56,7 +58,7 @@ export default async function Page({
         {!isFinalized && <AutoRefresh />}
         <Image
           className="h-16 mt-24"
-          src="https://i.imgur.com/eB0hIQX.png"
+          src={SolEasyLogo}
           alt="Logo"
         />
         <Card className="w-[500px] shadow-xl mt-5">
@@ -92,7 +94,7 @@ export default async function Page({
           <span className="flex flex-row text-gray-500 items-center">
             <Image
               className="w-4 h-4 mr-1 mb-0.5"
-              src="https://i.imgur.com/U69TcrN.png"
+              src={SolanaGray}
               alt="Solana Logo"
             />
             Powered By <p className="ml-1 font-bold">Solana</p>
