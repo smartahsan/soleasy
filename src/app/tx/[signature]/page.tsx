@@ -4,7 +4,7 @@ import {
   CardFooter,
   CardHeader,
 } from "@/components/ui/card";
-import { Copy, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Transaction } from "@/types";
 import AutoRefresh from "@/components/AutoRefresh";
@@ -13,6 +13,7 @@ import TransactionData from "@/components/TransactionData";
 import FromTo from "@/components/FromTo";
 import { timeAgo } from "@/util/TimeAgo";
 import ClipboardButton from "@/components/ClipboardButton";
+import Image from "next/image";
 
 export default async function Page({
   params,
@@ -53,7 +54,7 @@ export default async function Page({
     return (
       <div className="flex items-center h-screen flex-col">
         {!isFinalized && <AutoRefresh />}
-        <img
+        <Image
           className="h-16 mt-24"
           src="https://i.imgur.com/eB0hIQX.png"
           alt="Logo"
@@ -89,7 +90,7 @@ export default async function Page({
         </Card>
         <div className="w-[450px] flex mt-10 flex-row items-center justify-between">
           <span className="flex flex-row text-gray-500 items-center">
-            <img
+            <Image
               className="w-4 h-4 mr-1 mb-0.5"
               src="https://i.imgur.com/U69TcrN.png"
               alt="Solana Logo"
